@@ -212,6 +212,7 @@ class StudyBoard:
         self.columns: dict[str, ScrollableColumn] = {}
         self.column_counts: dict[str, tk.StringVar] = {}
         self.completed_var = tk.StringVar()
+        self.total_time_var = tk.StringVar()
         self.progress_var = tk.DoubleVar(value=0)
         self.detail_windows: dict[str, tk.Toplevel] = {}
         self.note_editors: dict[str, dict] = {}
@@ -256,6 +257,7 @@ class StudyBoard:
         style.configure("Priority.TLabel", background=COLORS["amber"], foreground="#231C0D", font=(system_family, 9, "bold"), padding=(6, 3))
         style.configure("Hint.TLabel", background=COLORS["canvas"], foreground=COLORS["muted"], font=(system_family, 9))
         style.configure("CardHint.TLabel", background=COLORS["card"], foreground=COLORS["muted"], font=(system_family, 9))
+        style.configure("CardTime.TLabel", background=COLORS["card"], foreground=COLORS["teal"], font=(system_family, 9, "bold"))
         style.configure("FormHeading.TLabel", background=COLORS["canvas"], foreground=COLORS["ink"], font=(system_family, 10, "bold"))
         style.configure("StatusLine.TLabel", background=COLORS["canvas"], foreground=COLORS["muted"], font=(system_family, 9))
         style.configure("Board.TCombobox", padding=(4, 3), font=(system_family, 9))
@@ -296,10 +298,11 @@ class StudyBoard:
         ttk.Label(title_block, text="Caderno de estudos", style="Title.TLabel").pack(anchor="w")
         ttk.Label(title_block, text="Sua trilha de programação e computação", style="Subtitle.TLabel").pack(anchor="w", pady=(3, 0))
 
-        summary = ttk.Frame(top, style="App.TFrame", width=250)
+        summary = ttk.Frame(top, style="App.TFrame", width=280)
         summary.pack(side="right", padx=(18, 0), anchor="center")
         summary.pack_propagate(False)
-        ttk.Label(summary, textvariable=self.completed_var, style="Summary.TLabel").pack(anchor="e", pady=(3, 6))
+        ttk.Label(summary, textvariable=self.total_time_var, style="Summary.TLabel").pack(anchor="e", pady=(0, 4))
+        ttk.Label(summary, textvariable=self.completed_var, style="Subtitle.TLabel").pack(anchor="e", pady=(0, 6))
         ttk.Progressbar(summary, maximum=len(self.subjects), variable=self.progress_var, style="TProgressbar").pack(fill="x")
 
         board = ttk.Frame(shell, style="App.TFrame")
@@ -334,6 +337,8 @@ class StudyBoard:
 
         resolved = sum(1 for subject in self.subjects if self.statuses.get(subject["key"]) == "Resolvido")
         self.completed_var.set(f"{resolved} de {len(self.subjects)} resolvidas")
+        total_minutes = sum(self.session_minutes_by_subject.values())
+        self.total_time_var.set(f"{_format_duration(total_minutes)} estudadas no total")
         self.progress_var.set(resolved)
 
     def _make_card(self, parent: tk.Misc, subject: dict, status: str) -> tk.Frame:
@@ -351,6 +356,10 @@ class StudyBoard:
 
         self._recommendation(body, "Teoria", subject.get("theory", ""))
         self._recommendation(body, "Prática", subject.get("practice", ""))
+
+        time_summary = self._card_time_summary(subject["key"])
+        if time_summary:
+            ttk.Label(body, text=time_summary, style="CardTime.TLabel", wraplength=305, justify="left").pack(anchor="w", pady=(5, 0))
 
         resources_count = len(subject.get("resources", []))
         books_count = len(subject.get("books", []))
@@ -387,6 +396,32 @@ class StudyBoard:
             lambda _event, key=subject["key"], old=status, variable=status_var: self._change_status(key, old, variable.get()),
         )
         return card
+
+    def _card_time_summary(self, subject_key: str) -> str:
+        details = self.subject_details[subject_key]
+        mode = details["time_mode"]
+        if mode == "sessions":
+            planned = details.get("planned_minutes")
+            logged = self.session_minutes_by_subject.get(subject_key, 0)
+            if planned is None:
+                if logged:
+                    return f"{_format_duration(logged)} estudadas · previsão não definida"
+                return ""
+            if logged > planned:
+                return f"{_format_duration(logged)} estudadas · previsão ultrapassada"
+            return f"{_format_duration(logged)} estudadas · faltam {_format_duration(planned - logged)}"
+        if mode == "manual":
+            remaining = details.get("manual_remaining_minutes")
+            return f"Restam {_format_duration(remaining)}" if remaining is not None else ""
+        target = details.get("target_date")
+        if not target:
+            return ""
+        days = (date.fromisoformat(target) - date.today()).days
+        if days > 0:
+            return f"Concluir até {target} · faltam {days} dias"
+        if days == 0:
+            return f"Concluir até {target} · data de hoje"
+        return f"Concluir até {target} · atraso de {abs(days)} dias"
 
     def _recommendation(self, parent: tk.Misc, label: str, value: str) -> None:
         if not value:
@@ -1008,6 +1043,7 @@ def run() -> None:
         initialize(subjects)
         statuses = load_statuses(subjects)
         subject_details = load_subject_details(subject["key"] for subject in subjects)
+        session_minutes_by_subject = load_session_totals(subject["key"] for subject in subjects)
     except (CatalogError, OSError, sqlite3.Error, ValueError) as error:
         root.title("Caderno de estudos")
         root.geometry("500x220")
@@ -1020,6 +1056,6 @@ def run() -> None:
         root.destroy()
         return
 
-    StudyBoard(root, subjects, statuses, subject_details)
+    StudyBoard(root, subjects, statuses, subject_details, session_minutes_by_subject)
     root.deiconify()
     root.mainloop()
