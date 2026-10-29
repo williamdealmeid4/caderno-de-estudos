@@ -238,6 +238,10 @@ class StudyBoard:
         heading_family = tkfont.nametofont("TkHeadingFont").actual("family")
         if "clam" in style.theme_names():
             style.theme_use("clam")
+        self.root.option_add("*TCombobox*Listbox.background", COLORS["input"])
+        self.root.option_add("*TCombobox*Listbox.foreground", COLORS["ink"])
+        self.root.option_add("*TCombobox*Listbox.selectBackground", COLORS["selection"])
+        self.root.option_add("*TCombobox*Listbox.selectForeground", COLORS["ink"])
 
         style.configure(".", background=COLORS["canvas"], foreground=COLORS["ink"])
         style.configure("TFrame", background=COLORS["canvas"])
@@ -282,6 +286,7 @@ class StudyBoard:
         style.configure("Dark.Treeview.Heading", background=COLORS["line"], foreground=COLORS["ink"], font=(system_family, 9, "bold"), relief="flat")
         style.map("Dark.Treeview", background=[("selected", COLORS["selection"])], foreground=[("selected", COLORS["ink"])])
         style.configure("Vertical.TScrollbar", background=COLORS["card"], troughcolor=COLORS["canvas"], bordercolor=COLORS["canvas"], arrowcolor=COLORS["muted"], darkcolor=COLORS["card"], lightcolor=COLORS["card"])
+        style.configure("TSeparator", background=COLORS["line"])
         style.configure("TProgressbar", background=COLORS["teal"], troughcolor=COLORS["line"], borderwidth=0, thickness=5)
         style.configure("Dark.TLabelframe", background=COLORS["canvas"], foreground=COLORS["ink"], bordercolor=COLORS["line"])
         style.configure("Dark.TLabelframe.Label", background=COLORS["canvas"], foreground=COLORS["ink"], font=(system_family, 9, "bold"))
