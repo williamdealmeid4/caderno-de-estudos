@@ -1,0 +1,828 @@
+{
+  "name": "Caderno de estudos",
+  "statuses": [
+    "Pendente",
+    "Fazendo",
+    "Resolvido"
+  ],
+  "subjects": [
+    {
+      "key": "algoritmos",
+      "priority": 1,
+      "name": "Algoritmos",
+      "theory": "Entendendo Algoritmos",
+      "practice": "Beecrowd",
+      "resources": [
+        {
+          "title": "Harvard CS50",
+          "description": "Ciência da computação e algoritmos",
+          "type": "Teoria + prática",
+          "url": "https://cs50.harvard.edu/x/",
+          "area": "Programação"
+        },
+        {
+          "title": "Curso em Vídeo",
+          "description": "Lógica e algoritmos em português",
+          "type": "Teoria + prática",
+          "url": "https://www.cursoemvideo.com/",
+          "area": "Programação"
+        },
+        {
+          "title": "Beecrowd",
+          "description": "Problemas de programação por dificuldade",
+          "type": "Prática",
+          "url": "https://judge.beecrowd.com/",
+          "area": "Programação"
+        },
+        {
+          "title": "Exercism",
+          "description": "Trilhas de linguagens",
+          "type": "Prática",
+          "url": "https://exercism.org/",
+          "area": "Programação"
+        },
+        {
+          "title": "Codewars",
+          "description": "Desafios de código",
+          "type": "Prática",
+          "url": "https://www.codewars.com/",
+          "area": "Programação"
+        },
+        {
+          "title": "LeetCode",
+          "description": "Estruturas de dados e algoritmos",
+          "type": "Prática",
+          "url": "https://leetcode.com/",
+          "area": "Programação"
+        }
+      ],
+      "books": [
+        {
+          "title": "Entendendo Algoritmos — Aditya Bhargava",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Algoritmos: Teoria e Prática — Cormen et al.",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Algoritmos e Lógica de Programação — Forbellone e Eberspächer",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "python",
+      "priority": 2,
+      "name": "Python",
+      "theory": "Tutorial oficial Python",
+      "practice": "Exercism Python",
+      "resources": [
+        {
+          "title": "Python Tutorial",
+          "description": "Sintaxe oficial",
+          "type": "Teoria",
+          "url": "https://docs.python.org/pt-br/3/tutorial/",
+          "area": "Programação"
+        },
+        {
+          "title": "Harvard CS50P",
+          "description": "Curso e atividades Python",
+          "type": "Teoria + prática",
+          "url": "https://cs50.harvard.edu/python/",
+          "area": "Programação"
+        },
+        {
+          "title": "Practice Python",
+          "description": "Exercícios graduais",
+          "type": "Prática",
+          "url": "https://www.practicepython.org/",
+          "area": "Programação"
+        },
+        {
+          "title": "Exercism Python",
+          "description": "Trilha Python",
+          "type": "Prática",
+          "url": "https://exercism.org/tracks/python",
+          "area": "Programação"
+        },
+        {
+          "title": "Automate the Boring Stuff",
+          "description": "Automação e livro online",
+          "type": "Teoria + prática",
+          "url": "https://automatetheboringstuff.com/",
+          "area": "Programação"
+        }
+      ],
+      "books": [
+        {
+          "title": "Python Fluente — Luciano Ramalho",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Automatize Tarefas Maçantes com Python — Al Sweigart",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Pense em Python — Allen B. Downey",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "go",
+      "priority": 3,
+      "name": "Go",
+      "theory": "A Tour of Go",
+      "practice": "Exercism Go",
+      "resources": [
+        {
+          "title": "A Tour of Go",
+          "description": "Tutorial oficial interativo",
+          "type": "Teoria + prática",
+          "url": "https://go.dev/tour/",
+          "area": "Programação"
+        },
+        {
+          "title": "Go by Example",
+          "description": "Exemplos executáveis",
+          "type": "Teoria + prática",
+          "url": "https://gobyexample.com/",
+          "area": "Programação"
+        },
+        {
+          "title": "Go Documentation",
+          "description": "Documentação oficial",
+          "type": "Teoria",
+          "url": "https://go.dev/doc/",
+          "area": "Programação"
+        },
+        {
+          "title": "Exercism Go",
+          "description": "Exercícios da linguagem",
+          "type": "Prática",
+          "url": "https://exercism.org/tracks/go",
+          "area": "Programação"
+        },
+        {
+          "title": "Go Web Examples",
+          "description": "Backend web em Go",
+          "type": "Prática",
+          "url": "https://gowebexamples.com/",
+          "area": "Programação"
+        }
+      ],
+      "books": [
+        {
+          "title": "The Go Programming Language — Donovan e Kernighan",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Let's Go — Alex Edwards",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Let's Go Further — Alex Edwards",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "rust",
+      "priority": 4,
+      "name": "Rust",
+      "theory": "The Rust Programming Language",
+      "practice": "Rustlings",
+      "resources": [
+        {
+          "title": "The Rust Programming Language",
+          "description": "Livro oficial gratuito",
+          "type": "Teoria",
+          "url": "https://doc.rust-lang.org/book/",
+          "area": "Programação"
+        },
+        {
+          "title": "Rust by Example",
+          "description": "Exemplos e atividades",
+          "type": "Teoria + prática",
+          "url": "https://doc.rust-lang.org/rust-by-example/",
+          "area": "Programação"
+        },
+        {
+          "title": "Rustlings",
+          "description": "Exercícios no terminal",
+          "type": "Prática",
+          "url": "https://rustlings.rust-lang.org/",
+          "area": "Programação"
+        },
+        {
+          "title": "Exercism Rust",
+          "description": "Problemas em Rust",
+          "type": "Prática",
+          "url": "https://exercism.org/tracks/rust",
+          "area": "Programação"
+        },
+        {
+          "title": "Cargo Book",
+          "description": "Pacotes e builds",
+          "type": "Teoria",
+          "url": "https://doc.rust-lang.org/cargo/",
+          "area": "Programação"
+        }
+      ],
+      "books": [
+        {
+          "title": "Programming Rust — Blandy, Orendorff e Tindall",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Rust for Rustaceans — Jon Gjengset",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "frontend",
+      "priority": 5,
+      "name": "Frontend",
+      "theory": "MDN Learn",
+      "practice": "Frontend Mentor",
+      "resources": [
+        {
+          "title": "MDN Learn",
+          "description": "HTML, CSS, JavaScript e acessibilidade",
+          "type": "Teoria + prática",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development",
+          "area": "Programação"
+        },
+        {
+          "title": "freeCodeCamp",
+          "description": "Projetos web",
+          "type": "Prática",
+          "url": "https://www.freecodecamp.org/learn/",
+          "area": "Programação"
+        },
+        {
+          "title": "The Odin Project",
+          "description": "Formação web",
+          "type": "Teoria + prática",
+          "url": "https://www.theodinproject.com/",
+          "area": "Programação"
+        },
+        {
+          "title": "JavaScript.info",
+          "description": "JavaScript completo",
+          "type": "Teoria + prática",
+          "url": "https://javascript.info/",
+          "area": "Programação"
+        },
+        {
+          "title": "TypeScript Handbook",
+          "description": "Documentação TypeScript",
+          "type": "Teoria",
+          "url": "https://www.typescriptlang.org/docs/handbook/",
+          "area": "Programação"
+        },
+        {
+          "title": "Vue Tutorial",
+          "description": "Vue interativo",
+          "type": "Teoria + prática",
+          "url": "https://vuejs.org/tutorial/",
+          "area": "Programação"
+        },
+        {
+          "title": "Nuxt Docs",
+          "description": "Nuxt e SSR",
+          "type": "Teoria",
+          "url": "https://nuxt.com/docs",
+          "area": "Programação"
+        },
+        {
+          "title": "Frontend Mentor",
+          "description": "Desafios de interfaces",
+          "type": "Prática",
+          "url": "https://www.frontendmentor.io/",
+          "area": "Programação"
+        },
+        {
+          "title": "CSSBattle",
+          "description": "Desafios visuais em CSS",
+          "type": "Prática",
+          "url": "https://cssbattle.dev/",
+          "area": "Programação"
+        }
+      ],
+      "books": [
+        {
+          "title": "Eloquent JavaScript — Marijn Haverbeke",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "You Don’t Know JS Yet — Kyle Simpson",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "CSS: The Definitive Guide — Eric Meyer e Estelle Weyl",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "backend-apis",
+      "priority": 6,
+      "name": "Backend e APIs",
+      "theory": "Full Stack Open",
+      "practice": "Postman Learning",
+      "resources": [
+        {
+          "title": "Node.js Learn",
+          "description": "Node, HTTP e programação assíncrona",
+          "type": "Teoria",
+          "url": "https://nodejs.org/en/learn",
+          "area": "Programação"
+        },
+        {
+          "title": "Full Stack Open",
+          "description": "Node, REST e testes",
+          "type": "Teoria + prática",
+          "url": "https://fullstackopen.com/en/",
+          "area": "Programação"
+        },
+        {
+          "title": "MDN HTTP",
+          "description": "Protocolo HTTP",
+          "type": "Teoria",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+          "area": "Programação"
+        },
+        {
+          "title": "Postman Learning",
+          "description": "Requisições e testes de API",
+          "type": "Teoria + prática",
+          "url": "https://learning.postman.com/",
+          "area": "Programação"
+        },
+        {
+          "title": "Swagger / OpenAPI",
+          "description": "Documentação de APIs",
+          "type": "Teoria",
+          "url": "https://swagger.io/docs/",
+          "area": "Programação"
+        },
+        {
+          "title": "JSON.org",
+          "description": "Sintaxe de JSON",
+          "type": "Referência",
+          "url": "https://www.json.org/json-en.html",
+          "area": "Programação"
+        }
+      ],
+      "books": [
+        {
+          "title": "Web API Design — Brian Mulloy",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Designing Data-Intensive Applications — Martin Kleppmann",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "sql",
+      "priority": 7,
+      "name": "SQL",
+      "theory": "MySQL Documentation",
+      "practice": "SQLBolt",
+      "resources": [
+        {
+          "title": "SQLBolt",
+          "description": "SQL interativo",
+          "type": "Prática",
+          "url": "https://sqlbolt.com/",
+          "area": "Programação"
+        },
+        {
+          "title": "PostgreSQL Exercises",
+          "description": "Consultas SQL",
+          "type": "Prática",
+          "url": "https://pgexercises.com/",
+          "area": "Programação"
+        },
+        {
+          "title": "MySQL Documentation",
+          "description": "Documentação MySQL",
+          "type": "Teoria",
+          "url": "https://dev.mysql.com/doc/",
+          "area": "Programação"
+        }
+      ],
+      "books": [
+        {
+          "title": "SQL Antipatterns — Bill Karwin",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Learning SQL — Alan Beaulieu",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "git",
+      "priority": 8,
+      "name": "Git",
+      "theory": "Pro Git",
+      "practice": "Learn Git Branching",
+      "resources": [
+        {
+          "title": "Pro Git (PT-BR)",
+          "description": "Livro gratuito",
+          "type": "Teoria",
+          "url": "https://git-scm.com/book/pt-br/v2",
+          "area": "Programação"
+        },
+        {
+          "title": "GitHub Skills",
+          "description": "Cursos guiados no GitHub",
+          "type": "Prática",
+          "url": "https://skills.github.com/",
+          "area": "Programação"
+        },
+        {
+          "title": "Learn Git Branching",
+          "description": "Simulador de branches",
+          "type": "Prática",
+          "url": "https://learngitbranching.js.org/?locale=pt_BR",
+          "area": "Programação"
+        },
+        {
+          "title": "GitHub Docs",
+          "description": "GitHub, Actions e colaboração",
+          "type": "Teoria",
+          "url": "https://docs.github.com/pt",
+          "area": "Programação"
+        }
+      ],
+      "books": []
+    },
+    {
+      "key": "linux",
+      "priority": 9,
+      "name": "Linux",
+      "theory": "How Linux Works",
+      "practice": "OverTheWire Bandit",
+      "resources": [
+        {
+          "title": "Linux Journey",
+          "description": "Introdução ao Linux",
+          "type": "Teoria",
+          "url": "https://linuxjourney.com/",
+          "area": "Computação"
+        },
+        {
+          "title": "The Linux Command Line",
+          "description": "Livro livre sobre terminal",
+          "type": "Teoria + prática",
+          "url": "https://linuxcommand.org/tlcl.php",
+          "area": "Computação"
+        },
+        {
+          "title": "MIT Missing Semester",
+          "description": "Terminal e ferramentas",
+          "type": "Teoria + prática",
+          "url": "https://missing.csail.mit.edu/2026/",
+          "area": "Computação"
+        },
+        {
+          "title": "OverTheWire Bandit",
+          "description": "Desafios Linux",
+          "type": "Prática",
+          "url": "https://overthewire.org/wargames/bandit/",
+          "area": "Computação"
+        },
+        {
+          "title": "ArchWiki",
+          "description": "Referência de administração Linux",
+          "type": "Referência",
+          "url": "https://wiki.archlinux.org/",
+          "area": "Computação"
+        },
+        {
+          "title": "Ubuntu Server Docs",
+          "description": "Servidor Linux",
+          "type": "Teoria",
+          "url": "https://ubuntu.com/server/docs",
+          "area": "Computação"
+        },
+        {
+          "title": "Debian Documentation",
+          "description": "Administração Debian",
+          "type": "Teoria",
+          "url": "https://www.debian.org/doc/",
+          "area": "Computação"
+        }
+      ],
+      "books": [
+        {
+          "title": "Sistemas Operacionais Modernos — Tanenbaum",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Operating Systems: Three Easy Pieces — Arpaci-Dusseau",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "How Linux Works — Brian Ward",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "UNIX and Linux System Administration Handbook — Nemeth et al.",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "windows",
+      "priority": 10,
+      "name": "Windows",
+      "theory": "Microsoft Learn",
+      "practice": "PowerShell",
+      "resources": [
+        {
+          "title": "Microsoft Learn PowerShell",
+          "description": "Administração com PowerShell",
+          "type": "Teoria + prática",
+          "url": "https://learn.microsoft.com/pt-br/training/paths/get-started-windows-powershell/",
+          "area": "Computação"
+        },
+        {
+          "title": "Microsoft Sysinternals",
+          "description": "Diagnóstico Windows",
+          "type": "Teoria + prática",
+          "url": "https://learn.microsoft.com/en-us/sysinternals/",
+          "area": "Computação"
+        },
+        {
+          "title": "Windows Server Docs",
+          "description": "Administração Windows Server",
+          "type": "Teoria",
+          "url": "https://learn.microsoft.com/en-us/windows-server/",
+          "area": "Computação"
+        }
+      ],
+      "books": []
+    },
+    {
+      "key": "redes",
+      "priority": 11,
+      "name": "Redes",
+      "theory": "Kurose e Ross",
+      "practice": "Cisco Packet Tracer",
+      "resources": [
+        {
+          "title": "Cisco Networking Academy",
+          "description": "Fundamentos de redes",
+          "type": "Teoria + prática",
+          "url": "https://www.netacad.com/",
+          "area": "Computação"
+        },
+        {
+          "title": "Cisco Packet Tracer",
+          "description": "Simulação de redes",
+          "type": "Prática",
+          "url": "https://www.netacad.com/pt/catalogs/learn/cisco-packet-tracer",
+          "area": "Computação"
+        },
+        {
+          "title": "Practical Networking",
+          "description": "TCP/IP e sub-redes",
+          "type": "Teoria",
+          "url": "https://www.practicalnetworking.net/",
+          "area": "Computação"
+        },
+        {
+          "title": "Subnetting Practice",
+          "description": "Exercícios de endereçamento",
+          "type": "Prática",
+          "url": "https://www.subnettingpractice.com/",
+          "area": "Computação"
+        },
+        {
+          "title": "Wireshark Docs",
+          "description": "Análise de pacotes",
+          "type": "Teoria + prática",
+          "url": "https://www.wireshark.org/docs/",
+          "area": "Computação"
+        },
+        {
+          "title": "Cloudflare Learning",
+          "description": "DNS, HTTP e TLS",
+          "type": "Teoria",
+          "url": "https://www.cloudflare.com/learning/",
+          "area": "Computação"
+        }
+      ],
+      "books": [
+        {
+          "title": "Redes de Computadores — Tanenbaum e Wetherall",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Redes de Computadores e a Internet — Kurose e Ross",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "TCP/IP Illustrated, Volume 1 — Stevens e Fall",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Computer Networking Problems and Solutions — White e Banks",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "ciberseguranca",
+      "priority": 12,
+      "name": "Cibersegurança",
+      "theory": "OWASP Top 10",
+      "practice": "PortSwigger Academy",
+      "resources": [
+        {
+          "title": "TryHackMe",
+          "description": "Laboratórios guiados",
+          "type": "Teoria + prática",
+          "url": "https://tryhackme.com/",
+          "area": "Computação"
+        },
+        {
+          "title": "Hack The Box Academy",
+          "description": "Treinamentos de segurança",
+          "type": "Teoria + prática",
+          "url": "https://academy.hackthebox.com/",
+          "area": "Computação"
+        },
+        {
+          "title": "PortSwigger Academy",
+          "description": "Laboratórios de segurança web",
+          "type": "Teoria + prática",
+          "url": "https://portswigger.net/web-security",
+          "area": "Computação"
+        },
+        {
+          "title": "OWASP Juice Shop",
+          "description": "Aplicação deliberadamente vulnerável",
+          "type": "Prática",
+          "url": "https://owasp.org/www-project-juice-shop/",
+          "area": "Computação"
+        },
+        {
+          "title": "picoCTF",
+          "description": "Desafios CTF",
+          "type": "Prática",
+          "url": "https://picoctf.org/",
+          "area": "Computação"
+        },
+        {
+          "title": "OWASP Top 10",
+          "description": "Riscos de aplicações web",
+          "type": "Teoria",
+          "url": "https://owasp.org/www-project-top-ten/",
+          "area": "Computação"
+        },
+        {
+          "title": "pwn.college",
+          "description": "Segurança de sistemas",
+          "type": "Teoria + prática",
+          "url": "https://pwn.college/",
+          "area": "Computação"
+        }
+      ],
+      "books": [
+        {
+          "title": "The Web Application Hacker’s Handbook — Stuttard e Pinto",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Real-World Bug Hunting — Peter Yaworski",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Security Engineering — Ross Anderson",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "The Linux Command Line — William Shotts",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "virtualizacao",
+      "priority": 13,
+      "name": "Virtualização",
+      "theory": "VirtualBox Manual",
+      "practice": "Docker Get Started",
+      "resources": [
+        {
+          "title": "VirtualBox Manual",
+          "description": "Máquinas virtuais",
+          "type": "Teoria",
+          "url": "https://www.virtualbox.org/manual/",
+          "area": "Computação"
+        },
+        {
+          "title": "Docker Get Started",
+          "description": "Contêineres",
+          "type": "Teoria + prática",
+          "url": "https://docs.docker.com/get-started/",
+          "area": "Computação"
+        },
+        {
+          "title": "Terraform Tutorials",
+          "description": "Infraestrutura como código",
+          "type": "Teoria + prática",
+          "url": "https://developer.hashicorp.com/terraform/tutorials",
+          "area": "Computação"
+        }
+      ],
+      "books": [
+        {
+          "title": "Docker Deep Dive — Nigel Poulton",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "The Practice of System and Network Administration — Limoncelli et al.",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "UNIX and Linux System Administration Handbook — Nemeth et al.",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    },
+    {
+      "key": "hardware",
+      "priority": 14,
+      "name": "Hardware",
+      "theory": "CompTIA A+",
+      "practice": "iFixit",
+      "resources": [
+        {
+          "title": "iFixit",
+          "description": "Reparos e desmontagem",
+          "type": "Teoria + prática",
+          "url": "https://www.ifixit.com/",
+          "area": "Computação"
+        },
+        {
+          "title": "CompTIA",
+          "description": "Referência para suporte técnico",
+          "type": "Teoria",
+          "url": "https://www.comptia.org/",
+          "area": "Computação"
+        },
+        {
+          "title": "Cisco Networking Academy",
+          "description": "Fundamentos de hardware",
+          "type": "Teoria + prática",
+          "url": "https://www.netacad.com/",
+          "area": "Computação"
+        },
+        {
+          "title": "Intel Support",
+          "description": "Drivers e diagnóstico",
+          "type": "Referência",
+          "url": "https://www.intel.com/content/www/us/en/support.html",
+          "area": "Computação"
+        },
+        {
+          "title": "Windows Hardware",
+          "description": "Drivers e dispositivos",
+          "type": "Referência",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/",
+          "area": "Computação"
+        }
+      ],
+      "books": [
+        {
+          "title": "CompTIA A+ Certification All-in-One Exam Guide — Mike Meyers",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Organização Estruturada de Computadores — Tanenbaum e Austin",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Computer Organization and Design — Patterson e Hennessy",
+          "note": "Verificar disponibilidade/edição"
+        },
+        {
+          "title": "Upgrading and Repairing PCs — Scott Mueller",
+          "note": "Verificar disponibilidade/edição"
+        }
+      ]
+    }
+  ]
+}
